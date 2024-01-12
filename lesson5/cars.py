@@ -20,11 +20,11 @@ class CarSlots:
     pass
 
 
-car = Car('Toyota', 'Corolla', 2022)
-car_slots = Car('Toyota', 'Crown', 1990)
+car = Car("Toyota", "Corolla", 2022)
+car_slots = Car("Toyota", "Crown", 1990)
 
 import timeit
 
 t1 = timeit.timeit(car.get_set_del)
 t2 = timeit.timeit(car_slots.get_set_del)
-print((t1-t2)/t1*100)
+print((t1 - t2) / t1 * 100)

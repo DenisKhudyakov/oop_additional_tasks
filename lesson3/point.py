@@ -12,7 +12,7 @@ class Point:
     pass
 
 
-# код для проверки 
+# код для проверки
 point1 = Point(1, 2)
 print(repr(point1))  # Point(1, 2)
 print(str(point1))  # (1, 2)

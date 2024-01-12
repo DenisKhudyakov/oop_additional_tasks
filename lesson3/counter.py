@@ -11,7 +11,7 @@ class Counter:
     pass
 
 
-# код для проверки 
+# код для проверки
 counter = Counter()
 print(counter())  # 0
 

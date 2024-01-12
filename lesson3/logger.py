@@ -11,6 +11,6 @@ class Logger:
     pass
 
 
-# код для проверки 
+# код для проверки
 logger = Logger("log.txt")
 logger("This is a test message.")

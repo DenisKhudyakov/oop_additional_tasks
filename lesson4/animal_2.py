@@ -4,7 +4,6 @@
 
 
 class Animal:
-
     def __init__(self, name):
         pass
 
@@ -13,19 +12,16 @@ class Animal:
 
 
 class Dog(Animal):
-
     def bark(self):
-        print('Bark!')
+        print("Bark!")
 
 
 class Cat(Animal):
-
     def meow(self):
-        print('Meow!')
+        print("Meow!")
 
 
-
-animals = [Dog('Dog1'), Dog('Dog2'), Cat('Cat1'), Dog('Dog3')]
+animals = [Dog("Dog1"), Dog("Dog2"), Cat("Cat1"), Dog("Dog3")]
 
 for animal in animals:
     # Должно выводиться Bark или Meow в зависимости от того какой класс

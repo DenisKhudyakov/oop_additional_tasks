@@ -6,13 +6,11 @@
 
 
 class Employee:
-
     def __init__(self, pay):
         self.pay = pay
 
 
 class Client:
-
     def __init__(self, pay):
         self.pay = pay
 
@@ -23,6 +21,7 @@ class Developer(Employee):
 
 class Manager(Employee):
     pass
+
 
 # код для проверки
 users = [Employee(50000), Client(100000), Developer(50000), Manager(50000)]

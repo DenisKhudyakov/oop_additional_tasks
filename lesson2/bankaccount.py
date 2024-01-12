@@ -12,17 +12,37 @@
 
 
 class BankAccount:
-    pass
+    def __init__(self, balance: float) -> None:
+        """Инициализация класса банковский аккаунт"""
+        self.balance = balance
+
+    @property
+    def get_balance(self):
+        """Геттер баланса"""
+        return self.balance
+
+    @get_balance.setter
+    def deposit(self, amount):
+        """Функция пополнения счета"""
+        self.balance += amount
+
+    @get_balance.setter
+    def withdraw(self, amount):
+        self.balance -= amount
+
+    def close(self, amount=0):
+        self.balance = amount
+
 
 
 # код для проверки
 account = BankAccount(1000)
 print(account.balance)  # 1000
 
-account.deposit(500)
+account.deposit = 500
 print(account.balance)  # 1500
 
-account.withdraw(200)
+account.withdraw = 200
 print(account.balance)  # 1300
 
 account.close()

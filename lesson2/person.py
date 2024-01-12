@@ -1,3 +1,6 @@
+from typing import Optional
+import datetime
+from datetime import date
 """
 Напишите класс Person, имеющий следующие методы:
 
@@ -11,7 +14,21 @@
 
 
 class Person:
-    pass
+    def __init__(self, name: str, age: int) -> None:
+        """Конструктор класса Person"""
+        self.name = name
+        self.age = age
+
+    def display(self) -> None:
+        print(f"{self.name} {self.age}")
+
+    @classmethod
+    def from_birth_year(cls, name: str, birth_year: int) -> Optional:
+        age = datetime.datetime.now().year - birth_year
+        return cls(name, age)
+    @staticmethod
+    def is_adult(age) -> bool:
+        return True if age >= 18 else False
 
 
 # код для проверки

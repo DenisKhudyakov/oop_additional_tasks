@@ -14,7 +14,37 @@
 
 
 class User:
-    pass
+
+    def __init__(self, name: str, password: str) -> None:
+        """Конструктор класса User"""
+        self.name = name
+        self.password = password
+        self.is_admin = False
+
+    @property
+    def get_pass(self):
+        return self.password
+
+    @get_pass.setter
+    def new_pass(self, new_pass) -> None:
+        self.password = new_pass
+
+    @property
+    def get_is_admin(self):
+        return self.is_admin
+
+    @get_is_admin.setter
+    def _is_admin(self, new_bool: bool):
+        self.is_admin = new_bool
+
+    def login(self, password):
+        return True if password == self.password else False
+
+    def logout(self):
+        _is_logged_in = False
+        return _is_logged_in
+
+
 
 
 # код для проверки

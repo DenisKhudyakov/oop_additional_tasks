@@ -11,7 +11,26 @@
 
 
 class Rectangle:
-    pass
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
+
+    def perimeter(self):
+        return 2 * self.width + 2 * self.height
+
+    def area(self):
+        return self.height * self.width
+
+    @classmethod
+    def from_diagonal(cls, diagonal, aspect_ratio):
+        """
+        Таким образом, стороны прямоугольника равны d*r/(r+1) и
+        d/(r+1), где d - диагональ, а r - отношение сторон.
+        """
+        return cls(diagonal*aspect_ratio/(aspect_ratio+1), diagonal/(aspect_ratio + 1))
+    @staticmethod
+    def is_square(width, height):
+        return True if width == height else False
 
 
 # код для проверки

@@ -14,8 +14,21 @@
 """
 
 
+class Person:
+    __slots__ = ('name', 'age', 'salary')
+    def __init__(self, name, age, salary):
+        self.name = name
+        self.age = age
+        self.salary = salary
+
 class Employee:
-    pass
+
+    def __init__(self, name, age, salary):
+        if 18 <= age <= 127 and salary >= 16242:
+            super().__init__(name, age, salary)
+        else:
+            raise ValueError('Оплата труда не может быть меньше 16242')
+
 
 
 # код для проверки

@@ -5,24 +5,35 @@
 
 class Animal:
     def __init__(self, name):
-        pass
+        self.name = name
 
     def walk(self):
-        pass
+        print('Я гуляю')
+
 
 
 class Dog(Animal):
-    def bark(self):
-        print("Bark!")
+
+    @staticmethod
+    def bark():
+        return "Bark!"
+
+    def __repr__(self):
+        return self.bark()
 
 
 class Cat(Animal):
-    def meow(self):
-        print("Meow!")
+    @staticmethod
+    def meow():
+        return "Meow!"
+
+    def __repr__(self):
+        return self.meow()
+
 
 
 animals = [Dog("Dog1"), Dog("Dog2"), Cat("Cat1"), Dog("Dog3")]
 
 for animal in animals:
     # Должно выводиться Bark или Meow в зависимости от того какой класс
-    pass
+    print(animal)

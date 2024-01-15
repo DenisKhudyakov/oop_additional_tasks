@@ -13,10 +13,13 @@
 
 
 class Car:
-    pass
+    def __int__(self, brand, model, year):
+        self.brand = brand
+        self.model = model
+        self.year = year
 
 
-class CarSlots:
+class CarSlots(Car):
     pass
 
 

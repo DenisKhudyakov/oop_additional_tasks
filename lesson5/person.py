@@ -18,21 +18,49 @@
 
 
 class Person:
-    pass
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    @property
+    def getname(self):
+        return self.name
+
+    @property
+    def getage(self):
+        return self.age
+
+class Employee2(Person):
+    def __init__(self, name, age, salary):
+        super().__init__(name, age)
+        self.salary = salary
+
+    @property
+    def get_salary(self):
+        return self.salary
+
+class Manager2(Employee2):
+
+    def __init__(self, name, age, salary, bonus):
+        super().__init__(name, age, salary)
+        self.bonus = bonus
+    @property
+    def get_bonus(self):
+        return self.bonus
 
 
 # код для проверки
 person = Person("John", 30)
-print(person.get_name())  # John
-print(person.get_age())  # 30
+print(person.getname)  # John
+print(person.getage)  # 30
 
 employee = Employee2("Jane", 25, 5000)
-print(employee.get_name())  # Jane
-print(employee.get_age())  # 25
-print(employee.get_salary())  # 5000
+print(employee.getname)  # Jane
+print(employee.getage)  # 25
+print(employee.get_salary)  # 5000
 
 manager = Manager2("Bob", 40, 10000, 5000)
-print(manager.get_name())  # Bob
-print(manager.get_age())  # 40
-print(manager.get_salary())  # 10000
-print(manager.get_bonus())  # 5000
+print(manager.getname)  # Bob
+print(manager.getage)  # 40
+print(manager.get_salary)  # 10000
+print(manager.get_bonus)  # 5000
